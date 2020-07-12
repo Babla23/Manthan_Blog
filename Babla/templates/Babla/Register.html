@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Registration Page
+{% endblock %}
+
+{% block Blog %}
+
+    <form action="{% url 'Login' %}">
+    <table align="center" border="1" bgcolor="#d3d3d3">
+        <tr>
+            <th bgcolor="white">
+                <marquee>
+                    <h1 align="center">Registration Page</h1><hr width="100%"></marquee>
+
+            </th>
+        </tr>
+        <th id="cent">Employee Details</th>
+        <tr id="cent">
+            <td><input type="text" placeholder="Enter First Name" required
+            pattern="^[A-Za-z]*$"></td>
+        </tr>
+        <tr id="cent">
+            <td><input type="text" placeholder="Enter Last Name" required pattern="^[A-Za-z]*$"></td>
+        </tr>
+        <tr id="cent">
+            <td><textarea rows="5" cols="25" placeholder="Enter Your Address" required></textarea></td>
+        </tr>
+        <tr id="cent">
+            <td><input type="tel" placeholder="Enter Contact Number" required pattern="[7-9][0-9]{9}"></td>
+        </tr>
+        <tr id="cent">
+            <td><input type="email" placeholder="Enter Email" required></td>
+        </tr>
+        <tr id="cent">
+            <td>Gender : <input type="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female
+            <input type="radio" name="Gender">Others</td>
+        </tr>
+        <tr id="cent">
+            <td>
+                Designation:
+                <select>
+                    <option>Select Designation</option>
+                    <option>Manager</option>
+                    <option>Developer</option>
+                    <option>QA</option>
+                    <option>HR Manager</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="cent">
+            <td>
+                Technical Skills:
+                <input type="checkbox">Python
+                <input type="checkbox">Java
+                <input type="checkbox">.Net
+                <input type="checkbox">Angular
+            </td>
+        </tr>
+        <tr id="cent">
+            <td><input type="text" placeholder="Enter Username" required pattern="^[a-zA-Z0-9]*$"></td>
+        </tr>
+        <tr id="cent">
+            <td><input type="password" placeholder="Enter Password" required></td>
+        </tr>
+        <tr>
+            <td>
+                <pre><small>Password must contains 8 characters, atlease a small letter,
+Capital letter and a special symbol.</small></pre>
+            </td>
+        </tr>
+        <tr id="cent">
+            <th><input type="submit">
+            <input type="reset">
+            <input type="button" value="Cancel"></th>
+        </tr>
+    </table>
+    </form>
+{% endblock %}

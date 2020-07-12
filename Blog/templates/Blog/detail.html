@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ full_blog.name }}
+{% endblock %}
+
+{% block Blog %}
+
+    <div class="container">
+    <a href="{{ full_blog.pic.url }}"><img src="{{ full_blog.pic.url }}" height="400px" width="600px"/></a>
+    {{ full_blog.name }}
+    <br>
+    {{ full_blog.address }}
+    <br>
+    {{ full_blog.contact }}
+    <br>
+    {{ full_blog.mail }}
+    <br>
+    </div>
+{% endblock %}

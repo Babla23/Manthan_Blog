@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block Blog %}
+    <abbr title="{{ baba_detail.name }}"><img src="{{ baba_detail.pic.url }}" width="500px" height="250px"/></abbr>
+    <br>
+    <a href="{{ baba_detail.pic.url }}" download="one.jpg"><button> Download Now</button></a>
+    {{ baba_detail.name }}
+    <br>
+    {{ baba_detail.address }}
+    <br>
+    <a href="tel:{{ baba_detail.contact }}">{{ baba_detail.contact }}</a>
+    <br>
+    {{ baba_detail.mail }}
+    <br>
+{% endblock %}

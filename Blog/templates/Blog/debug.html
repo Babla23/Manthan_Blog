@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login Page | Employee
+{% endblock %}
+
+{% block Blog %}
+<h1 align="center">Login Page</h1><hr><br>
+    <form>
+        <table align="center" border="1" width="20%">
+            <tr id="cent">
+                <th>Employees Login Details</th>
+            </tr>
+            <tr id="cent">
+                <td><input type="text" id="mail" placeholder="Enter Phone No. or Email" required autofocus></td>
+            </tr>
+            <tr id="cent">
+                <td><input type="password" id="mail" placeholder=" Enter Password" required></td>
+            </tr>
+            <tr id="cent">
+                <th><input type="submit" value="Login"></th>
+            </tr>
+            <tr>
+                <td><a href="{% url 'Register' %}">Sign Up</a>&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="#">Forgot Password?</a> </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Blog | Home Page
+{% endblock %}
+
+{% block Blog %}
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+          {% for var_project in Man.all %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ var_project.pic.url }}" height="100%" width="100%"/>
+            <div class="card-body">
+                <p class="card-text">{{ var_project.name }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'new' var_project.slug %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                </div>
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
